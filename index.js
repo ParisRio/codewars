@@ -1,29 +1,9 @@
-// 39 --> 3 (because 3*9 = 27, 2*7 = 14, 1*4 = 4 and 4 has only one digit)
-// 999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2)
-// 4 --> 0 (because 4 is already a one-digit number)
-function persistence(num) {
-
-  let numString = num.toString();
-  let size = numString.length;
-  let persistence = 0;
-
-  if (size === 1) {
-    return persistence
-  } else if (size > 1) {
-    let persistenceAchieved = false
-    while (!persistenceAchieved) {
-      let multiplication = parseFloat(numString.charAt(0))
-      for (let index = 1; index < size; index++) {
-        multiplication = multiplication * parseFloat(numString.charAt(index))
-      }
-      if (multiplication.toString().length < 2) {
-        persistenceAchieved = true
-      }
-      persistence++;
-      numString = multiplication.toString();
-      size = numString.length;
-    }
-    return persistence
-  }
-}
-console.log(persistence(139));
+//K5 Descending Order
+// Your task is to make a function that can take any non-negative integer as an 
+//argument and return it with its digits in descending order. Essentially,
+// rearrange the digits to create the highest possible number.
+// Examples:
+// Input: 42145 Output: 54421
+// Input: 145263 Output: 654321
+// Input: 123456789 Output: 987654321
+//https://www.codewars.com/kata/5467e4d82edf8bbf40000155/train/javascript
