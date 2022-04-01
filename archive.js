@@ -146,4 +146,28 @@ function isIsogram(str){
 const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
 console.log(longest('xyaabbbccccdefww', 'xxxxyyyyabklmopq'));
 
+//K8 Human Readable Time
+//https://www.codewars.com/kata/52685f7382004e774f0001f7/train/javascript
+// Write a function, which takes a non-negative integer (seconds) as input and 
+//returns the time in a human-readable format (HH:MM:SS)
+//HH = hours, padded to 2 digits, range: 00 - 99
+//MM = minutes, padded to 2 digits, range: 00 - 59
+//SS = seconds, padded to 2 digits, range: 00 - 59
+// The maximum time never exceeds 359999 (99:59:59)
+//strictEqual(humanReadable(3599), '00:59:59', 'humanReadable(3599)');
+//strictEqual(humanReadable(0), '00:00:00', 'humanReadable(0)');
+//dont for the 00 case
+function humanReadable(seconds) {
+  let hours = Math.trunc(seconds / 3600)
+  let minutes = Math.trunc((seconds % 3600) / 60)
+  let seconds2 = seconds % 3600 % 60
+  const results = [hours, minutes, seconds2].map(item =>
+    item < 10 ? (item = '0' + item.toString()) : (item = item.toString())
+  )
+  return `${results[0]}:${results[1]}:${results[2]}`;
+}
+console.log(humanReadable(3599));
+
+
+
 
