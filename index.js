@@ -14,7 +14,11 @@
 // "[(])"     =>  False
 // "[({})](]" =>  False
 //https://regexlearn.com/learn/regex101
+//https://regexlearn.com/cheatsheet
 function validBraces(braces){
-  //TODO 
+  const re = /\{\}/g
+  //return braces.match(re)
+  return re.test(braces)
 }
 console.log(validBraces('[({})](]'));
+//console.log(validBraces('abcABC123 .:!?'));
