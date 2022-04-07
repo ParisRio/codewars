@@ -169,5 +169,65 @@ function humanReadable(seconds) {
 console.log(humanReadable(3599));
 
 
+//
+//K9 valid braces
+//https://www.codewars.com/kata/5277c8a221e209d3f6000b56/train/javascript
+// Write a function that takes a string of braces, and determines if the order of the
+//braces is valid. It should return true if the string is valid, and false if it's invalid.
+// This Kata is similar to the Valid Parentheses Kata, but introduces new characters:
+//brackets [], and curly braces {}. Thanks to @arnedag for the idea!
+// All input strings will be nonempty, and will only consist of parentheses, brackets
+//and curly braces: ()[]{}.
+// What is considered Valid?
+// A string of braces is considered valid if all braces are matched with the correct brace.
+//"(){}[]"   =>  True
+// "([{}])"   =>  True
+// "(}"       =>  False
+// "[(])"     =>  False
+// "[({})](]" =>  False
+//https://regexlearn.com/learn/regex101
+//https://regexlearn.com/cheatsheet
+//
+//const re = /\{\}/g
+//return braces.match(re)
+//return re.test(braces)
+//return true;
+//
+function validBraces(braces) {
+  console.log(matches);
+  if (braces.length % 2 === 0) {
+    let array = braces.split('');
+    let continueTesting = true;
+    while (continueTesting) {
+      array2 = array.filter((item, index) => {
+        if (item === '(' && array[index + 1] === ')' || item === '{' && array[index + 1] === '}' || item === '[' && array[index + 1] === ']') {
+          array.splice(index + 1, 1)
+          return false
+        } else {
+          return true
+        }
+      })
+      array2.length === array.length ? continueTesting = false : array = array2
+    }
+    let result;
+    array2.length === 0 ? result = true : result = false;
+    return result;
+  } else {
+    return false;
+  }
+}
+console.log(validBraces(')(([{}])()))('));
+//console.log(validBraces('abcABC123 .:!?'));
+//regex solution
+function validBraces(braces){
+  while(/\(\)|\[\]|\{\}/g.test(braces)){braces = braces.replace(/\(\)|\[\]|\{\}/g,"")}
+  return !braces.length;
+ }
+
+ //
+
+
+ 
+
 
 

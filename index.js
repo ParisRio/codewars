@@ -1,24 +1,10 @@
-//K9 valid braces
-//https://www.codewars.com/kata/5277c8a221e209d3f6000b56/train/javascript
-// Write a function that takes a string of braces, and determines if the order of the
- //braces is valid. It should return true if the string is valid, and false if it's invalid.
-// This Kata is similar to the Valid Parentheses Kata, but introduces new characters:
- //brackets [], and curly braces {}. Thanks to @arnedag for the idea!
-// All input strings will be nonempty, and will only consist of parentheses, brackets
- //and curly braces: ()[]{}.
-// What is considered Valid?
-// A string of braces is considered valid if all braces are matched with the correct brace.
-//"(){}[]"   =>  True
-// "([{}])"   =>  True
-// "(}"       =>  False
-// "[(])"     =>  False
-// "[({})](]" =>  False
-//https://regexlearn.com/learn/regex101
-//https://regexlearn.com/cheatsheet
-function validBraces(braces){
-  const re = /\{\}/g
-  //return braces.match(re)
-  return re.test(braces)
+//K11
+//https://www.codewars.com/kata/520b9d2ad5c005041100000f/train/javascript
+// Move the first letter of each word to the end of it, then add "ay" to the end of the word.
+// Leave punctuation marks untouched.
+// Examples
+// pigIt('Pig latin is cool'); // igPay atinlay siay oolcay
+// pigIt('Hello world !');     // elloHay orldway !
+function pigIt(str){
+  //Code here
 }
-console.log(validBraces('[({})](]'));
-//console.log(validBraces('abcABC123 .:!?'));
