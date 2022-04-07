@@ -225,9 +225,31 @@ function validBraces(braces){
  }
 
  //
+ //K11
+//https://www.codewars.com/kata/520b9d2ad5c005041100000f/train/javascript
+// Move the first letter of each word to the end of it, then add "ay" to the end of the word.
+// Leave punctuation marks untouched.
+// Examples
+// pigIt('Pig latin is cool'); // igPay atinlay siay oolcay
+// pigIt('Hello world !');     // elloHay orldway !
+function pigIt(str){
+  //return /^[a-z]+$/i.test(str)
+  // let array = str.split(' ');
+  // const results = array.map(item => {
+  //   firstChar = item.charAt(0);
+  //   /^[a-z]+$/i.test(item) ? item = item.replace(firstChar,'') + firstChar + 'ay' : item
+  //   return item;
+  // })
+  //return results.join(' ')
+  return str.split(' ').map(item => /^[a-z]+$/i.test(item) ? item.replace(item.charAt(0),'') + item.charAt(0) + 'ay' : item ).join(' ')
+  //Code here
+}
+console.log(pigIt('Hello world !'));
+
+//
 
 
- 
+
 
 
 

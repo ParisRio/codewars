@@ -1,10 +1,12 @@
-//K11
-//https://www.codewars.com/kata/520b9d2ad5c005041100000f/train/javascript
-// Move the first letter of each word to the end of it, then add "ay" to the end of the word.
-// Leave punctuation marks untouched.
-// Examples
-// pigIt('Pig latin is cool'); // igPay atinlay siay oolcay
-// pigIt('Hello world !');     // elloHay orldway !
-function pigIt(str){
-  //Code here
-}
+//K12
+//https://www.codewars.com/kata/52449b062fb80683ec000024/train/javascript
+// The marketing team is spending way too much time typing in hashtags.
+// Let's help them with our own Hashtag Generator!
+// Here's the deal:
+//     It must start with a hashtag (#).
+//     All words must have their first letter capitalized.
+//     If the final result is longer than 140 chars it must return false.
+//     If the input or the result is an empty string it must return false.
+// " Hello there thanks for trying my Kata"  =>  "#HelloThereThanksForTryingMyKata"
+// "    Hello     World   "                  =>  "#HelloWorld"
+// ""                                        =>  false
